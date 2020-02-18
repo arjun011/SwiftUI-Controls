@@ -183,3 +183,54 @@
 ### OutPut 
 
 ![Screenshot 2020-02-18 at 2 48 46 PM](https://user-images.githubusercontent.com/16661905/74721993-32bef400-525e-11ea-9d00-7f4e57aa34e6.png)
+
+## Slider 
+
+    struct ContentView: View {
+    @State private var age = 18.0
+    @State private var sliderValue = 0.3
+    let ageFormatter: NumberFormatter = {
+        let numFormate = NumberFormatter()
+        numFormate.numberStyle = .spellOut
+        return numFormate
+    }()
+    var body: some View {
+        VStack(spacing:20){
+            Text("Slider")
+            Slider(value: $age, in: 1...100, step: 1)
+            Group {
+                Text("Age: ") + Text("\(ageFormatter.string(from: NSNumber(value: age))!)").foregroundColor(.green)
+            }
+            
+            Slider(value: $sliderValue)
+                .padding(.horizontal)
+                .background(Color.yellow)
+                .cornerRadius(10)
+                .shadow(color: .gray, radius: 5)
+                .accentColor(Color.green)
+            
+            Slider(value: $sliderValue)
+                .padding(.horizontal)
+                .background(Capsule().stroke(Color.orange, lineWidth: 2))
+                .accentColor(.orange)
+            
+            Slider(value:$sliderValue)
+                .padding(.horizontal)
+                .background(Capsule().fill(Color.yellow))
+                .accentColor(.black)
+            
+            HStack {
+                Image(systemName: "tortoise")
+                Slider(value:$sliderValue)
+                Image(systemName: "hare")
+            }.padding()
+                .foregroundColor(.green)
+            Spacer()
+        }.padding()
+     }
+    }
+   
+   ## OutPut
+
+![Screenshot 2020-02-18 at 2 58 50 PM](https://user-images.githubusercontent.com/16661905/74722658-4dde3380-525f-11ea-8e4c-102cd6905bd2.png)
+   

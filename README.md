@@ -5,6 +5,7 @@
  - [Slider](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#slider)
  - [Date Picker](https://github.com/arjun011/SwiftUI-DatePicker)
  - [UIButton](https://github.com/arjun011/SwiftUI-Button)
+ - [Form](https://github.com/arjun011/SwiftUI-Form)
 ## Segment 
  
     struct ContentView: View {

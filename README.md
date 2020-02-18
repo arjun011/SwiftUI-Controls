@@ -138,3 +138,47 @@
 ![Screenshot 2020-02-18 at 2 31 56 PM](https://user-images.githubusercontent.com/16661905/74720701-305b9a80-525c-11ea-93e8-4e6d61e97259.png)
 ![Screenshot 2020-02-18 at 2 31 44 PM](https://user-images.githubusercontent.com/16661905/74720702-30f43100-525c-11ea-8786-32b44d82e125.png)
 
+## Stepper ##
+
+    struct ContentView: View {
+     @State private var stepperValue = 1
+     @State private var values = [0,1]
+     var body: some View {
+        VStack(spacing:20) {
+            Text("Stepper")
+                .font(.largeTitle)
+            Stepper(value: $stepperValue) {
+                Text("Bound Stepper: \(stepperValue)")
+            }
+            
+            Stepper(onIncrement: {
+                self.values.append(self.values.count)
+            }, onDecrement: {
+                self.values.removeLast()
+            }) {
+                Text("OnIncrement and OnDecrement")
+            }
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(values, id: \.self) { value in
+                        Image(systemName: "\(value).circle.fill").font(.largeTitle)
+                            .foregroundColor(.green)
+                    }
+                }.padding()
+            }
+            Stepper(value: $stepperValue, in: 1...5) {
+                Text("Rating")
+            }.padding(.horizontal)
+            HStack {
+                ForEach(1...stepperValue, id: \.self) { star in
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
+                 }
+             }
+         }.padding()
+      }
+    }
+
+# OutPut 
+
+![Screenshot 2020-02-18 at 2 48 46 PM](https://user-images.githubusercontent.com/16661905/74721993-32bef400-525e-11ea-9d00-7f4e57aa34e6.png)

@@ -1,5 +1,9 @@
 # SwiftUI-Controls
 
+http://github.com - automatic!
+[Segment](http://github.com)
+
+
 ## Segment ##
  
     struct ContentView: View {

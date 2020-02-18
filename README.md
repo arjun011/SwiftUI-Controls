@@ -3,7 +3,7 @@
  - [Text and TabView](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#text-and-tabview)
 
 
-## Segment ##
+## Segment 
  
     struct ContentView: View {
         @State private var dayNight = "morning"
@@ -43,11 +43,11 @@
       }
     }
     
- # Output
+ ### Output
  
  ![Screenshot 2020-02-18 at 1 58 39 PM](https://user-images.githubusercontent.com/16661905/74718519-67c84800-5258-11ea-90d0-78b60002ff92.png)
  
- ## Text and TabView ##
+ ## Text and TabView 
 
     struct FontDesign: View {
      var body: some View {
@@ -132,13 +132,13 @@
        }
     }
 
-# OutPut 
+### OutPut 
 
  ![Screenshot 2020-02-18 at 2 32 03 PM](https://user-images.githubusercontent.com/16661905/74720699-2e91d700-525c-11ea-842c-e1a0d233f238.png)
 ![Screenshot 2020-02-18 at 2 31 56 PM](https://user-images.githubusercontent.com/16661905/74720701-305b9a80-525c-11ea-93e8-4e6d61e97259.png)
 ![Screenshot 2020-02-18 at 2 31 44 PM](https://user-images.githubusercontent.com/16661905/74720702-30f43100-525c-11ea-8786-32b44d82e125.png)
 
-## Stepper ##
+## Stepper 
 
     struct ContentView: View {
      @State private var stepperValue = 1
@@ -179,6 +179,6 @@
       }
     }
 
-# OutPut 
+### OutPut 
 
 ![Screenshot 2020-02-18 at 2 48 46 PM](https://user-images.githubusercontent.com/16661905/74721993-32bef400-525e-11ea-9d00-7f4e57aa34e6.png)

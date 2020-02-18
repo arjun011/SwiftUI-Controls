@@ -1,5 +1,6 @@
 # SwiftUI-Controls
  - [Segment](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#segment)
+ - [Text and TabView](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#text-and-tabview)
 
 
 ## Segment ##

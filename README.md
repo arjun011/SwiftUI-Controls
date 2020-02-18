@@ -1,7 +1,5 @@
 # SwiftUI-Controls
-
-http://github.com - automatic!
-[Segment](http://github.com)
+ - [Segment](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#segment)
 
 
 ## Segment ##

@@ -3,6 +3,7 @@
  - [Text and TabView](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#text-and-tabview)
  - [Stepper](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#stepper)
  - [Slider](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#slider)
+ - [Date Picker](https://github.com/arjun011/SwiftUI-DatePicker)
 
 ## Segment 
  
@@ -233,4 +234,6 @@
    ## OutPut
 
 ![Screenshot 2020-02-18 at 2 58 50 PM](https://user-images.githubusercontent.com/16661905/74722658-4dde3380-525f-11ea-8e4c-102cd6905bd2.png)
+
+
    

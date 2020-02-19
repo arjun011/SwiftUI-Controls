@@ -9,6 +9,7 @@
 
 # SwiftUI-Views
    - [Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-shape)
+   - [Ellipse]()
 
 ## Segment 
  
@@ -301,5 +302,36 @@
    ### OutPut
 
 ![Screenshot 2020-02-19 at 6 14 57 PM](https://user-images.githubusercontent.com/16661905/74835850-3b89f580-5344-11ea-8357-448978192438.png)
+
+### Ellipse
+    
+    struct EllipeCustomView: View {
+      var body: some View {
+        VStack(spacing:20) {
+            Text("Ellips")
+            Ellipse()
+            
+            ZStack {
+                Ellipse()
+                    .stroke(Color.yellow, lineWidth: 30)
+                Ellipse()
+                .stroke()
+            }.padding()
+            
+            ZStack {
+                Ellipse()
+                    .strokeBorder(Color.pink,lineWidth: 30)
+                Ellipse()
+                    .stroke()
+            }
+            
+            Spacer()
+        }.padding()
+      }
+    }
+    
+   ## OutPut
+   
+   ![Screenshot 2020-02-19 at 6 15 06 PM](https://user-images.githubusercontent.com/16661905/74836253-0c27b880-5345-11ea-8415-34c3e6057632.png)
 
    

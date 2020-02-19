@@ -6,6 +6,8 @@
  - [Date Picker](https://github.com/arjun011/SwiftUI-DatePicker)
  - [UIButton](https://github.com/arjun011/SwiftUI-Button)
  - [Form](https://github.com/arjun011/SwiftUI-Form)
+ - [View]
+   - [Circle]()
 ## Segment 
  
     struct ContentView: View {
@@ -236,5 +238,66 @@
 
 ![Screenshot 2020-02-18 at 2 58 50 PM](https://user-images.githubusercontent.com/16661905/74722658-4dde3380-525f-11ea-8e4c-102cd6905bd2.png)
 
+## Circle shape
+
+    struct CircleCustomeTab: View {
+      var body: some View {
+        VStack(spacing: 15) {
+            Text("Circle")
+            Circle()
+                .fill(Color.orange)
+                .frame(width: 100)
+            
+            Circle()
+                .stroke(Color.red, style: StrokeStyle(lineWidth: 4, dash: [9,5]))
+                //.stroke(Color.red, lineWidth: 5)
+                .frame(width:100)
+                
+            
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: 100)
+            
+            ZStack() {
+                Circle()
+                    .stroke(Color.red,lineWidth: 10)
+                
+                Circle()
+                    .stroke(Color.yellow,lineWidth: 10)
+                    .padding(20)
+                
+                Circle()
+                    .stroke(Color.black,lineWidth: 10)
+                    .padding(40)
+                
+                Circle()
+                .stroke(Color.purple,lineWidth: 10)
+                .padding(60)
+                
+                
+            }.frame(width:200, height:200)
+            
+            ZStack {
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(height:250)
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(height:200)
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(height:150)
+                Circle()
+                    .fill(Color.secondary)
+                    .frame(height:100)
+            }
+            
+        }.padding()
+     }
+    }
+    
+   ### OutPut
+
+![Screenshot 2020-02-19 at 6 14 57 PM](https://user-images.githubusercontent.com/16661905/74835850-3b89f580-5344-11ea-8357-448978192438.png)
 
    

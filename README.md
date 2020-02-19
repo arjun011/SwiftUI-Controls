@@ -10,6 +10,7 @@
 # SwiftUI-Views
    - [Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-shape)
    - [Ellipse](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#ellipse)
+   - [Trim Circle]()
 
 ## Segment 
  
@@ -333,5 +334,60 @@
    ## OutPut
    
    ![Screenshot 2020-02-19 at 6 15 06 PM](https://user-images.githubusercontent.com/16661905/74836253-0c27b880-5345-11ea-8415-34c3e6057632.png)
+   
+   ## Circle Trim shape
+   
+     struct TripOutLine: View {
+        @State private var orangeCircleProgress:CGFloat = 0.9
+        @State private var greenCircleProgress:CGFloat = 0.3
+        private var percentage:Int {
+        get {
+            return Int(orangeCircleProgress * 100.0)
+        }
+    }
+    var body: some View {
+        VStack {
+            Text("Circle Shape")
+                .font(.largeTitle)
+            Text("Trim function")
+                .foregroundColor(.gray)
+            
+            ZStack {
+                Circle()
+                    .trim(from: 0.0, to: orangeCircleProgress)
+                    .stroke(Color.orange, style: StrokeStyle(lineWidth: 40, lineCap: CGLineCap.round))
+                    .frame(width:300)
+                    .rotationEffect(.degrees(-90))
+                    .overlay(
+                        Text("\(percentage)%")
+                )
+                
+                Circle()
+                    .trim(from: 0.0, to: greenCircleProgress)
+                    .stroke(Color.green, style: StrokeStyle(lineWidth: 40, lineCap: CGLineCap.round))
+                    .frame(width:170)
+                    .rotationEffect(.degrees(-90))
+                    .overlay(
+                        Text("\(percentage)%")
+                )
+            }
+            .padding()
+            Text("Completed Circle")
+            Slider(value: $orangeCircleProgress)
+                .padding(.horizontal)
+                .accentColor(.orange)
+            
+            Slider(value: $greenCircleProgress)
+                .padding(.horizontal)
+                .accentColor(.green)
+            
+        }.font(.title)
+            .padding()
+      }
+    }
+    
+   ### OutPut
+   
+   ![Screenshot 2020-02-19 at 6 14 52 PM](https://user-images.githubusercontent.com/16661905/74838668-fd8fd000-5349-11ea-864b-1226ead4efeb.png)
 
    

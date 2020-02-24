@@ -426,4 +426,44 @@
 ### OutPut
 
  ![Screenshot 2020-02-24 at 5 25 29 PM](https://user-images.githubusercontent.com/16661905/75150839-49b48900-572b-11ea-8a31-7436fc539017.png)
+ 
+ ## ActionSheet with item
+ 
+    // Create Identifiable struct to hold action sheet data.
+     struct ActionSheetData:Identifiable {
+       var id = UUID()
+       var title:String
+       var message:String
+     }
+    struct customDataAction: View {
+      @State private var actionSheetData: ActionSheetData? = nil
+      var body: some View {
+        VStack(spacing:20) {
+            Text("Action Sheet")
+                .font(.largeTitle)
+            Text("Action with custom data")
+                .foregroundColor(.gray)
+            Button(action: {
+                self.actionSheetData = ActionSheetData(title: "Save", message: "Choose an option!")
+            }) {
+                Text("Open Action sheet")
+            }
+        }.actionSheet(item: $actionSheetData) { sheetData in
+            ActionSheet(title: Text(sheetData.title), message: Text(sheetData.message), buttons: [
+                .default(Text("Default Option"), action: {
+                    //Option 1
+                }),
+                .destructive(Text("Destructive Option"), action: {
+                    // Destructive option
+                }),
+                .cancel({
+                    // Cancel
+                })
+            ])
+          }
+       }
+    }
    
+ ### OutPut
+ 
+ ![Screenshot 2020-02-24 at 5 25 58 PM](https://user-images.githubusercontent.com/16661905/75153089-80d96900-5730-11ea-873e-9b90c1f05dac.png)

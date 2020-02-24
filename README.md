@@ -11,6 +11,8 @@
    - [Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-shape)
    - [Ellipse](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#ellipse)
    - [Trim Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-trim-shape)
+   - [ActionSheet with isPresented]()
+   - [ActionSheet with item]()
 
 ## Segment 
  
@@ -389,5 +391,39 @@
    ### OutPut
    
    ![Screenshot 2020-02-19 at 6 14 52 PM](https://user-images.githubusercontent.com/16661905/74838668-fd8fd000-5349-11ea-864b-1226ead4efeb.png)
+   
+   ## Action Sheet with isPresented
+   
+    struct ContentView: View {
+     @State private var openActionsheet:Bool = false
+     var body: some View {
+        VStack(spacing:20) {
+            Text("Action Sheet")
+            Button(action: {
+                self.openActionsheet = true
+            }) {
+                Text("Open Action Sheet")
+            }
+        }.actionSheet(isPresented: $openActionsheet) { () -> ActionSheet in
+           ActionSheet(title: Text("Hello!"), message: Text("This is action sheet."), buttons: [
+            .default(Text("Action1"), action: {
+                // Action 1
+            }),
+            .default(Text("Action2"), action: {
+                // Action 2
+            }),
+            .destructive(Text("Red"), action: {
+                // Action 3
+            }),
+            .cancel({
+                // Cancel
+            })
+           ])
+        }
+      }
+    }
 
+### OutPut
+
+ ![Screenshot 2020-02-24 at 5 25 29 PM](https://user-images.githubusercontent.com/16661905/75150839-49b48900-572b-11ea-8a31-7436fc539017.png)
    

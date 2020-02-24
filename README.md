@@ -12,7 +12,7 @@
    - [Ellipse](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#ellipse)
    - [Trim Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-trim-shape)
    - [ActionSheet with isPresented](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#action-sheet-with-ispresented)
-   - [ActionSheet with item]()
+   - [ActionSheet with item](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#actionsheet-with-item)
 
 ## Segment 
  

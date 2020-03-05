@@ -13,6 +13,7 @@
    - [Trim Circle](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#circle-trim-shape)
    - [ActionSheet with isPresented](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#action-sheet-with-ispresented)
    - [ActionSheet with item](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#actionsheet-with-item)
+   - [contextMenu]()
 
 ## Segment 
  
@@ -467,3 +468,42 @@
  ### OutPut
  
  ![Screenshot 2020-02-24 at 5 25 58 PM](https://user-images.githubusercontent.com/16661905/75153089-80d96900-5730-11ea-873e-9b90c1f05dac.png)
+ 
+ ## ContextMenu 
+ 
+    struct ContentView: View {
+     var body: some View {
+        VStack(spacing:10) {
+            Text("Context Menu")
+                .font(.largeTitle)
+            Text("Introduction")
+                .foregroundColor(.gray)
+            Spacer()
+            HStack() {
+                Text("Get Help")
+                Spacer()
+                Image(systemName: "questionmark.diamond.fill")
+                    .foregroundColor(.yellow)
+                    .contextMenu {
+                        Button(action: {}) {
+                            Image(systemName: "eyedropper.full")
+                            Text("Add Color")
+                        }
+                        Button(action: {}) {
+                            Image(systemName: "sun.haze")
+                            Text("Haze")
+                        }
+                        Button(action: {}) {
+                            Image(systemName: "circle.lefthalf.fill")
+                            Text("Change Constrast")
+                        }
+                }
+            }.padding()
+            Spacer()
+        }.font(.title)
+      }
+    }
+    
+  ### OutPut
+  
+  ![Screenshot 2020-03-05 at 1 38 47 PM](https://user-images.githubusercontent.com/16661905/75962635-26879780-5eea-11ea-8258-012a563691aa.png)

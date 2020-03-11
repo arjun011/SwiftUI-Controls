@@ -14,6 +14,7 @@
    - [ActionSheet with isPresented](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#action-sheet-with-ispresented)
    - [ActionSheet with item](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#actionsheet-with-item)
    - [contextMenu](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#contextmenu)
+   - [Offset]()
 
 ## Segment 
  
@@ -507,3 +508,34 @@
   ### OutPut
   
   ![Screenshot 2020-03-05 at 1 38 47 PM](https://user-images.githubusercontent.com/16661905/75962635-26879780-5eea-11ea-8258-012a563691aa.png)
+  
+  ## Offset 
+  
+           VStack(spacing: 20) {
+            Text("Offset")
+                .font(.largeTitle)
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 200, height: 100)
+                    .foregroundColor(.green)
+                    .shadow(radius: 5)
+                    .offset(x: -20, y: -10)
+                
+                RoundedRectangle(cornerRadius: 10)
+                .frame(width: 200, height: 100)
+                .foregroundColor(.blue)
+                .shadow(radius: 5)
+
+                RoundedRectangle(cornerRadius: 10)
+                .frame(width: 200, height: 100)
+                .foregroundColor(.red)
+                .shadow(radius: 5)
+                .offset(x: 20, y: 20)
+                
+            }
+        }
+        
+  ### Output
+  
+  ![Screenshot 2020-03-11 at 6 08 08 PM](https://user-images.githubusercontent.com/16661905/76417878-acf91900-63c3-11ea-8c0e-995368251cfe.png)
+

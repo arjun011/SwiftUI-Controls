@@ -14,7 +14,7 @@
    - [ActionSheet with isPresented](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#action-sheet-with-ispresented)
    - [ActionSheet with item](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#actionsheet-with-item)
    - [contextMenu](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#contextmenu)
-   - [Offset]()
+   - [Offset](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#offset)
 
 ## Segment 
  

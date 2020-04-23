@@ -15,6 +15,7 @@
    - [ActionSheet with item](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#actionsheet-with-item)
    - [contextMenu](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#contextmenu)
    - [Offset](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#offset)
+   - [Mask](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#mask)
 
 ## Segment 
  

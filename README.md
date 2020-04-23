@@ -539,3 +539,42 @@
   
   ![Screenshot 2020-03-11 at 6 08 08 PM](https://user-images.githubusercontent.com/16661905/76417878-acf91900-63c3-11ea-8c0e-995368251cfe.png)
 
+## Mask 
+
+    struct ContentView: View {
+      var body: some View {
+        VStack {
+            Text("Mask")
+                .font(.largeTitle)
+            Text("Mask is use to cut out background with other view ")
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.orange)
+            
+            Image("Flag-India")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 100, height: 100)
+                .mask(Circle())
+            
+            Image("images")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .mask(
+                    Text("INDIA")
+                        .fontWeight(.black)
+                        .font(.largeTitle)
+            )
+            Image("images")
+                .resizable()
+                .frame(width: 100, height: 100)
+                .mask(Image(systemName: "tortoise").resizable())
+            Spacer()
+            
+        }
+     }
+    }
+    
+### Output 
+
+![Screen Shot 2020-04-23 at 1 53 55 PM](https://user-images.githubusercontent.com/16661905/80076597-1004d080-856a-11ea-94b0-479c89c84d73.png)

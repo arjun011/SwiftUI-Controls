@@ -16,6 +16,7 @@
    - [contextMenu](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#contextmenu)
    - [Offset](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#offset)
    - [Mask](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#mask)
+   - [Rotation]()
 
 ## Segment 
  
@@ -579,3 +580,73 @@
 ### Output 
 
 ![Screen Shot 2020-04-23 at 1 53 55 PM](https://user-images.githubusercontent.com/16661905/80076597-1004d080-856a-11ea-94b0-479c89c84d73.png)
+
+## Rotation 
+    struct ContentView: View {
+       @State var degree:Double = 360
+       var body: some View {
+        
+        VStack(spacing: 30) {
+            Text("Rotation")
+                .font(.largeTitle)
+            HStack {
+                Text("45")
+                    .rotationEffect(Angle.degrees(45))
+                Text("-45")
+                    .rotationEffect(Angle.degrees(-45))
+                Text("90")
+                    .rotationEffect(Angle.degrees(90))
+                Text("180")
+                    .rotationEffect(Angle.degrees(180))
+                Text("270")
+                    .rotationEffect(Angle.degrees(270))
+                Text("360")
+                    .rotationEffect(Angle.degrees(360))
+            }
+            Spacer()
+            
+            Text("Rotation")
+                .font(.caption)
+                .padding()
+                .rotationEffect(Angle.degrees(degree))
+                .border(Color.orange)
+            
+            HStack {
+                Text("Top Rotation")
+                    .font(.caption)
+                    .padding()
+                    .rotationEffect(Angle.degrees(degree), anchor: .top)
+                    .border(Color.orange)
+                
+                Text("TopLeading Rotation")
+                    .font(.caption)
+                    .padding()
+                    .rotationEffect(Angle.degrees(degree), anchor: .topLeading)
+                    .border(Color.orange)
+            }
+            
+            HStack {
+                Text("Bottom Rotation")
+                    .font(.caption)
+                    .padding()
+                    .rotationEffect(Angle.degrees(degree), anchor: .bottom)
+                    .border(Color.orange)
+                
+                Text("BottomLeading Rotation")
+                    .font(.caption)
+                    .padding()
+                    .rotationEffect(Angle.degrees(degree), anchor: .bottomLeading)
+                    .border(Color.orange)
+            }
+            
+            Slider(value: $degree, in: 0...360, step: 5.0)
+                .padding()
+            Text("\(degree, specifier: "%.2f") Degree")
+            Spacer()
+         }
+      }
+    }
+    
+### Output 
+
+![Screenshot 2020-04-24 at 10 49 45 AM](https://user-images.githubusercontent.com/16661905/80177448-6bda6280-8619-11ea-8c93-1b4dd19a51ab.png)

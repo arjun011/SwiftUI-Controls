@@ -583,7 +583,7 @@
 ![Screen Shot 2020-04-23 at 1 53 55 PM](https://user-images.githubusercontent.com/16661905/80076597-1004d080-856a-11ea-94b0-479c89c84d73.png)
 
 ## Rotation 
-    struct ContentView: View {
+     struct ContentView: View {
        @State var degree:Double = 360
        var body: some View {
         
@@ -653,9 +653,10 @@
 ![Screenshot 2020-04-24 at 10 49 45 AM](https://user-images.githubusercontent.com/16661905/80177448-6bda6280-8619-11ea-8c93-1b4dd19a51ab.png)
 
 ## Layout Priority 
-default value is 0
-
-  struct ContentView: View {
+     default value is 0
+     .layoutPriority(0)
+     
+     struct ContentView: View {
       var body: some View {
            HStack(alignment: .center, content: {
               Text("Hello World")
@@ -665,5 +666,5 @@ default value is 0
                   .layoutPriority(1)
           }).font(.title)
           .lineLimit(1)
+        }
       }
-  }

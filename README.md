@@ -17,7 +17,7 @@
    - [Offset](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#offset)
    - [Mask](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#mask)
    - [Rotation](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#rotation)
-   - [LayOut Priority](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#rotation)
+   - [LayOut Priority](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#layout-priority)
 
 ## Segment 
  
@@ -668,3 +668,8 @@
           .lineLimit(1)
         }
       }
+### Output
+
+![Simulator Screen Shot - iPhone 11 - 2021-10-18 at 13 56 14](https://user-images.githubusercontent.com/16661905/137700036-96911401-4408-4529-8f37-71d95b59c421.png)
+
+

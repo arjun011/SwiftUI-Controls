@@ -17,6 +17,7 @@
    - [Offset](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#offset)
    - [Mask](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#mask)
    - [Rotation](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#rotation)
+   - [LayOut Priority](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#rotation)
 
 ## Segment 
  
@@ -650,3 +651,19 @@
 ### Output 
 
 ![Screenshot 2020-04-24 at 10 49 45 AM](https://user-images.githubusercontent.com/16661905/80177448-6bda6280-8619-11ea-8c93-1b4dd19a51ab.png)
+
+## Layout Priority 
+default value is 0
+
+  struct ContentView: View {
+      var body: some View {
+           HStack(alignment: .center, content: {
+              Text("Hello World")
+              Text("SwiftUI")
+                  .foregroundColor(.blue)
+              Text("It's a next future")
+                  .layoutPriority(1)
+          }).font(.title)
+          .lineLimit(1)
+      }
+  }

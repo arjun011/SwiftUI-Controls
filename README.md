@@ -670,6 +670,7 @@
       }
 ### Output
 
-![Simulator Screen Shot - iPhone 11 - 2021-10-18 at 13 56 14](https://user-images.githubusercontent.com/16661905/137700036-96911401-4408-4529-8f37-71d95b59c421.png)
+<img width="78" alt="Screenshot 2021-10-18 at 2 26 31 PM" src="https://user-images.githubusercontent.com/16661905/137700521-4c2b5654-ea7d-4cbd-9f68-890ae6b060e1.png">
+
 
 

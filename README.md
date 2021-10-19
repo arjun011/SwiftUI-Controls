@@ -18,6 +18,7 @@
    - [Mask](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#mask)
    - [Rotation](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#rotation)
    - [LayOut Priority](https://github.com/arjun011/SwiftUI-Controls/blob/master/README.md#layout-priority)
+   - [LazyHGrid](https://github.com/arjun011/LazyHGrid)
 
 ## Segment 
  
